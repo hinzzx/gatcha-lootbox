@@ -32,7 +32,6 @@ const Navbar = () => {
           {/* Navigation menu */}
             <NavbarLink to="/"> Home</NavbarLink>
             <NavbarLink to="/lootboxes" > Lootbox</NavbarLink>
-            <NavbarLink to="/lootboxes" > Lootbox</NavbarLink>
 
             <OpenLinksButton
               onClick={() => {
