@@ -1,17 +1,30 @@
-# Getting Started with Create React App
+# Getting Started with GatchaLootboxes, in order to run the project, keep reading.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). <br>
+It is University Course project, so it has :
+
+- Login page;
+- Home page;
+- Lootboxes page;
+
+On the home page you get the - 'Get Started' text with - `Loot Now` button. When you click it you are taken to the Login Component.
+Here you can type whatever credentials you want *they have to be both password and username, otherwise you get an error.
+After you are logged in, you are given 5 credits with which you could open lootboxes.
+You can logout, then login again, and you will have 5 new credits so you can play. Pretty simple but fun app.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm install`
+
+To install all of the needed dependecies, to run the project efficiently.
+
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
+To start the project. <br>
+It Opens [http://localhost:3000](http://localhost:3000) to view it in your browser.<br>
+The page will reload when you make changes. <br>
 You may also see any lint errors in the console.
 
 ### `npm test`
