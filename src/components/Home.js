@@ -20,7 +20,7 @@ const Home = () => {
         >
           GET STARTED
         </Title>
-        <Linkche to="/login">
+        <Linkche to="/lootboxes">
           <GetStartedButton
             as={motion.a}
             initial={{ x: -50, opacity: 0 }}

@@ -49,7 +49,7 @@ useEffect(() => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.385 }}
     >
-      <h3>LOGIN</h3>
+      <h3>You have to login first ! Its simple</h3>
       <Label>Username</Label>
       <Input type="text" onChange={(e) => setUsername(e.target.value)}/>
 

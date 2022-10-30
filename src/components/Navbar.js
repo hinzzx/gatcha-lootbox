@@ -1,5 +1,4 @@
-import React from 'react'
-import  { useState } from 'react'
+import React, { useState } from 'react'
 import {
     NavbarContainer,
     LeftContainer,
@@ -31,8 +30,6 @@ const Navbar = () => {
         <NavbarLinkContainer> 
           {/* Navigation menu */}
             <NavbarLink to="/"> Home</NavbarLink>
-            <NavbarLink to="/lootboxes" > Lootbox</NavbarLink>
-
             <OpenLinksButton
               onClick={() => {
                 setExtendNavbar((curr) => !curr);
@@ -50,10 +47,7 @@ const Navbar = () => {
         animate={{ y: 100, opacity: 1 }}
         exit={{y: 0, opacity:0}}>
           {/* Navigation */}
-          <NavbarLinkExtended to="/" onClick={() => {setExtendNavbar((curr) => !curr)}}> Home</NavbarLinkExtended>
-          <NavbarLinkExtended to="/lootboxes" onClick={() => {setExtendNavbar((curr) => !curr)}}> Lootbox</NavbarLinkExtended>
-         
-          
+          <NavbarLinkExtended to="/" onClick={() => {setExtendNavbar((curr) => !curr)}}> Home</NavbarLinkExtended>    
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>
