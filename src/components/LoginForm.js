@@ -13,9 +13,9 @@ const LoginForm = () => {
 const onLogin = (e) => {
     e.preventDefault();
     if (username && password) {
-        setCredits(5);
+        setCredits(1000);
         setLoginStatus(true);
-        alert(`Login Successful and 5 credits added to your account`);
+        alert(`Login Successful and 1000 credits added to your account`);
     } else {
         setLoginStatus(false);
         setCredits(0);

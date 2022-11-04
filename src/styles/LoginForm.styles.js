@@ -52,6 +52,8 @@ export const Input = styled.input`
   margin-top: 0.2rem;
   font-size: 0.875rem;
   font-weight: 300;
+  /* padding left and right 0.1rem */
+  padding: 0 0.765rem;
 `;
 
 export const Button = styled.button`

@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  margin: 0;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 8rem;
+  flex-wrap: wrap;
   font-weight: 800;
   text-decoration: none;
 `;
@@ -20,6 +22,7 @@ export const InnerContainer = styled.div`
   justify-content: center;
   text-decoration: none;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
 `;
 
@@ -41,7 +44,7 @@ export const Card = styled.div`
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     font-size: 0.775rem;
 
@@ -98,3 +101,18 @@ export const Card = styled.div`
     }
   }
 `;
+
+export const LogoutButton = styled.button`
+  width: 10rem;
+  height: 3rem;
+  background-color: #DC3545;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0.313rem;
+  cursor: pointer;
+`;
+
