@@ -1,5 +1,7 @@
 # Getting Started with GatchaLootboxes, in order to run the project, keep reading.
 
+LIVE DEMO: <a href="https://gatcha-lootbox.netlify.app/"> Click here! </a>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). <br>
 It is University Course project, so it has :
 
