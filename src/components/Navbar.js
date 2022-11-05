@@ -11,12 +11,31 @@ import {
     OpenLinksButton,
     NavbarLinkExtended,
     LogoImg,
+    LogoutButton,
+    AddCreditsButton
   } from "../styles/Navbar.styles"
-
   import {VscMenu, VscChromeClose} from "react-icons/vsc"
   import { motion } from 'framer-motion'
   import LOGO from '../assets/LOGO-01.svg'
- 
+
+
+  const onLogout = () => {
+    localStorage.clear();
+    window.location.reload()
+  }
+
+  const addCredits = () => {
+    let credits = localStorage.getItem("credits");
+    // get login status
+    let loginStatus = localStorage.getItem("loginStatus");
+    if (loginStatus === "true") {
+      credits = parseInt(credits) + 1000;
+      localStorage.setItem("credits", credits);
+      alert(`1000 credits added to your account, you now have ${credits} credits`);
+    } else {
+      alert("Please login first");
+    }
+  };
 
 const Navbar = () => {
     const [extendNavbar, setExtendNavbar] = useState(false);
@@ -30,6 +49,8 @@ const Navbar = () => {
         <NavbarLinkContainer> 
           {/* Navigation menu */}
             <NavbarLink to="/"> Home</NavbarLink>
+            <AddCreditsButton onClick={addCredits}> Add Credits</AddCreditsButton>
+            <LogoutButton onClick={onLogout}>Logout</LogoutButton>
             <OpenLinksButton
               onClick={() => {
                 setExtendNavbar((curr) => !curr);
@@ -47,7 +68,9 @@ const Navbar = () => {
         animate={{ y: 100, opacity: 1 }}
         exit={{y: 0, opacity:0}}>
           {/* Navigation */}
-          <NavbarLinkExtended to="/" onClick={() => {setExtendNavbar((curr) => !curr)}}> Home</NavbarLinkExtended>    
+          <NavbarLinkExtended to="/" onClick={() => {setExtendNavbar((curr) => !curr)}}> Home</NavbarLinkExtended>
+          <AddCreditsButton onClick={addCredits}> Add Credits</AddCreditsButton>
+          <LogoutButton onClick={onLogout}>Logout</LogoutButton>
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>

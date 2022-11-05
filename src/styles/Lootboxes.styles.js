@@ -12,6 +12,45 @@ export const MainContainer = styled.div`
   flex-wrap: wrap;
   font-weight: 800;
   text-decoration: none;
+
+  --common: #fff;
+  --uncommon: #00d49b;
+  --rare: #00b0ff;
+  --epic: #a500ff;
+  --legendary: #ff8c00;
+
+  & .card-body .common {
+    background-color: var(--common);
+    /* add glass effect to the background */
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    }
+
+  & .card-body .uncommon {
+    background-color: var(--uncommon);
+    width: 100%;
+  }
+
+  & .card-body .rare {
+    background-color: var(--rare);
+    width: 100%;
+  }
+
+  & .card-body .epic {
+    background-color: var(--epic);
+    width: 100%;
+  }
+
+  & .card-body .legendary {
+    background-color: var(--legendary);
+    width: 100%;
+  }
 `;
 
 export const InnerContainer = styled.div`
@@ -51,6 +90,10 @@ export const Card = styled.div`
     & img {
       width: 50px;
       height: 41px;
+    }
+
+    & h1 {
+      text-transform: uppercase;
     }
   }
 
@@ -114,5 +157,63 @@ export const LogoutButton = styled.button`
   text-transform: uppercase;
   border-radius: 0.313rem;
   cursor: pointer;
+`;
+
+// Invertory, which displays looted items' images, with tooltips their names
+
+export const Inventory = styled.div`
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  /* backgrounds for every item rarity */
+
+  & .common {
+    background-color: var(--common);
+    border-radius: 0.313rem;
+    padding: 0.3rem;
+    }
+
+  & .uncommon {
+    background-color: var(--uncommon);
+    border-radius: 0.313rem;
+    padding: 0.3rem;
+  }
+
+  & .rare {
+    background-color: var(--rare);
+    border-radius: 0.313rem;
+    padding: 0.3rem;
+  }
+
+  & .epic {
+    background-color: var(--epic);
+    border-radius: 0.313rem;
+    padding: 0.3rem;
+  }
+
+  & .legendary {
+    background-color: var(--legendary);
+    border-radius: 0.313rem;
+    padding: 0.3rem;
+  }
+
+  & .inventory-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 2.75rem;
+      height: 2.75rem;
+  }
+}
 `;
 

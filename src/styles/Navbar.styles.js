@@ -49,6 +49,8 @@ export const NavbarInnerContainer = styled.div`
 
 export const NavbarLinkContainer = styled.div`
   display: flex;
+  align-items: center;
+  gap: 0.25rem;
 `;
 
 export const NavbarLink = styled(Link)`
@@ -93,7 +95,6 @@ export const NavbarLinkExtended = styled(Link)`
   display: inline-block;
   position: relative;
  
-}
 &:after {
   content: "";
   position: absolute;
@@ -110,6 +111,7 @@ export const NavbarLinkExtended = styled(Link)`
 &:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
 `;
 
 export const Logo = styled(Link)`
@@ -141,8 +143,54 @@ export const OpenLinksButton = styled.button`
 export const NavbarExtendedContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
   align-items: center;
+
+  & button {
+    @media (max-width: 720px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   @media (min-width: 720px) {
+    display: none;
+  }
+`;
+
+export const LogoutButton = styled.button`
+  width: 9rem;
+  height: 1.75rem;
+  background-color: #DC3545;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0.313rem;
+  cursor: pointer;
+
+  @media (max-width: 720px) {
+    display: none;
+  }
+`;
+
+export const AddCreditsButton = styled.button`
+  width: 9rem;
+  height: 1.75rem;
+  background-color: #00d49b;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0.313rem;
+  cursor: pointer;
+  white-space: nowrap;
+
+  @media (max-width: 720px) {
     display: none;
   }
 `;
