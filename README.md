@@ -11,8 +11,8 @@ It is University Course project, so it has :
 
 On the home page you get the - 'Get Started' text with - `Loot Now` button. When you click it you are taken to the Login Component.
 Here you can type whatever credentials you want *they have to be both password and username, otherwise you get an error.
-After you are logged in, you are given 5 credits with which you could open lootboxes.
-You can logout, then login again, and you will have 5 new credits so you can play. Pretty simple but fun app.
+After you are logged in, you are given 1000 credits with which you could open lootboxes.
+You can logout, then login again, and you will have 1000 new credits so you can play. Pretty simple but fun app.
 
 ## Available Scripts
 
